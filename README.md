@@ -16,6 +16,10 @@ Forkify is a JavaScript-based web application that allows users to search for re
 - Webpack (for bundling)
 - Forkify API
 
+## Live Demo
+
+Test the application here: [Forkify Live Demo](https://forkify-enhanced.netlify.app/)
+
 ## Getting Started
 
 Clone the repository, install dependencies, and start the development server to explore the project.
