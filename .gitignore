@@ -1,0 +1,9 @@
+# Node modules
+node_modules/
+
+# Parcel cache
+.parcel-cache/
+
+# Prettier config
+
+.prettierrc
