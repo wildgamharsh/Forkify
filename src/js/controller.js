@@ -23,6 +23,7 @@ const controlRecipes = async function () {
     resultsView.update(model.getSearchResultsPerPage());
     bookmarksView.update(model.state.bookmarks);
   } catch (err) {
+    console.warn(err.message);
     recipeView.renderError(err.message);
   }
 };
@@ -54,10 +55,10 @@ const controlBookmarks = function () {
 const controlAddRecipe = async function (newRecipe) {
   try {
     await model.uploadRecipe(newRecipe);
-    addRecipeView.renderMessage('Recipe successfully uploaded. ✔️');
     setTimeout(() => {
       addRecipeView._toggleWindow();
     }, MODAL_CLOSE_OUT * 1000);
+    addRecipeView.renderMessage('Recipe successfully uploaded. ✔️');
     recipeView.render(model.state.recipe);
     bookmarksView.render(model.state.bookmarks);
     console.log(model.state);
